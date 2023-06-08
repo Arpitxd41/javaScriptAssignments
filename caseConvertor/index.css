@@ -1,0 +1,91 @@
+.naming_conversion {
+  margin: 2em;
+  padding: 1.4em;
+  background: #242B2E;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.naming_conversion .cases_div {
+  border-radius: 16px;
+  padding: 0.7em;
+}
+.heading {
+  color: #5DA3FA;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+#convertBtn {
+  border: #00000076 solid 4px;
+  background-color: #FF6666;
+  border-radius: 40px;
+  width: 20%;
+  height: 50px;
+  font-family:'Courier New', Courier, monospace;
+}
+.naming_conversion #text {
+  margin: 0em 0em 1.4em;
+  outline: 0;
+  border-radius: 16px;
+  box-shadow: none;
+  border: #5DA3FA solid 4px;
+  padding: 0.5em 1.4em;
+  width: 60%;
+}
+
+.cases_div {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 80%;
+}
+
+.case_div {
+  width: 97%;
+  background-color: #5DA3FA;
+  border: #5DA3FA solid 3px;
+  border-radius: 12px;
+  margin: 0.5em 0em;
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  text-align: left;
+  object-fit: contain;
+}
+
+.case_div h4 {
+  font-size: 0.8em;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0em;
+  margin: 0em;
+  color: #242B2E;
+  text-decoration: underline;
+  margin: 2px 8px;
+}
+
+.case_div p {
+  font-size: 0.8em;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0em;
+  margin: 2px 8px;
+  color: #000;
+  overflow-x: scroll;
+  
+}
+.case_div p::-webkit-scrollbar {
+  display: none;
+}
+#convert-btn {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 12px;
+  padding: 0.3em 1.4em;
+  cursor: pointer;
+}
