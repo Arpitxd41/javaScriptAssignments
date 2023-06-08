@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess a Number</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <!-- CREATE THE ONE WITH EASY (FROM 0-10) AND MEDIUM(FROM 1-50) AND HARD(FROM 1-100) -->
+    
+    <div class="wrapper">
+        <h1>This is a Number Guessing Game !</h1>
+        <p class="message">Number can be anything between 0 to 10</p>
+        <p class="count">Total Attempt : <span class="attempts">0</span></p>
+        <form onsubmit="playGame(event)" id="form">
+            <input class="user" type="number" max="10" min="0" required>
+            <button type="submit">Check Ans</button>
+        </form>
+    </div>
+</body>
+
+<script>
+    let computer = Math.floor(Math.random() * 11); // we are not using math.sill as it will eliminate having the value zero and we don't want that....also we have to multiply with 11 as the value will be < 10 so multiply with 11 so we'll ahve the possibility of getting 10
+    let message = document.querySelector(".message");
+    let user = document.querySelector(".user");
+    let attempts = document.querySelector(".attempts");
+
+    const playGame = (event) => {
+        event.preventDefault();
+        if (attempts.innerHTML === '3') {
+            user.value = "";            
+            attempts.innerHTML = '0';
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
+        }
+        if (computer == user.value) {
+            message.innerHTML = "Congratulations";
+            celebrate();
+            setTimeout(() => {
+                computer = Math.floor(Math.random() * 11);
+                message.innerHTML = "Message";
+                user.value = "";
+                attempts.innerHTML = "0";
+            }, 3000);
+        } else if (user.value > 10) {
+            message.innerHTML = "limit is 0-10";
+        } else if (computer < user.value) {
+            message.innerHTML = "go small";
+        } else if (computer > user.value) {
+            message.innerHTML = "go bigger";
+        }
+        attempts.innerHTML = Number(attempts.innerHTML) + 1;
+    }
+    const celebrate = () => {
+        const defaults = {
+              spread: 360,
+              ticks: 50,
+              gravity: 0,
+              decay: 0.94,
+              startVelocity: 30,
+              shapes: ["star"],
+              colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+            };
+
+            function shoot() {
+              confetti({
+                ...defaults,
+                particleCount: 40,
+                scalar: 1.2,
+                shapes: ["star"],
+              });
+          
+              confetti({
+                ...defaults,
+                particleCount: 10,
+                scalar: 0.75,
+                shapes: ["circle"],
+              });
+            }
+
+            setTimeout(shoot, 0);
+            setTimeout(shoot, 100);
+            setTimeout(shoot, 200);
+        }
+</script>
+
+</html>
