@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Poppins:wght@400;500;600;700;900&family=Varela+Round&display=swap');
+
+
+body {
+  background-image: linear-gradient(#DB0B5F, #6F00ED);
+  background-repeat: no-repeat;
+  height: 640px;
+  background-size: contain;
+  color: #000;
+}
+.accordian_body {
+  max-width: 800px;
+  height: 600px;
+  border: 2px solid #000;
+  margin: 0em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0em;
+  position: relative;
+  top: 10px;
+}
+.faq1, .faq2, .faq3 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #CAD5E2;
+  background-color: #03203C;
+  border-radius: 8px;
+  width: 80%;
+  margin: 0em 0em 1.4em;
+  padding: 0.5em 2em;
+  position: relative;
+}
+.header1, .header2, .header3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: bolder;
+  font-family: 'Varela Round', sans-serif;
+  color: #CAD5E2;
+  margin: 0.2em 0em;
+}
+p {
+  font-size: 1em;
+  font-family: 'Varela Round', sans-serif;
+  margin: 0.5em 0em;
+  padding: 1em;
+  background-color: #CAD5E2;
+  color: #03203C;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  width: 500px;
+  left: 0px;
+}
+.hidden1, .hidden2, .hidden3 {
+  display: none;
+  z-index: 2;
+}
+.span1, .span2, .span3 {
+  font-size: 30px;
+  font-family: Poppins, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  color: #CAD5E2;
+  border: 1px solid #CAD5E2;
+  border-radius: 5px;
+  padding: 1px 15px;
+  cursor: pointer;
+  align-items: center;
+}
+
