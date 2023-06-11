@@ -33,6 +33,10 @@ function celeberate () {
 }
 
 
+function finish() {
+                             
+}
+
 const game = () => {
 
     // let choices = document.getElementsByClassName("choices");
@@ -90,12 +94,11 @@ const game = () => {
                         playerScore++;
                         playerScoreVal.textContent = playerScore;
                     }
-                    if (playerScore === 10 || compScore === 10) {
-                        celeberate();                    
+                    if (playerScore === 10 || compScore === 10) {   
+                        celeberate();
                         setTimeout(() => {
-                            result
                             window.location.reload();
-                        }, 2000);
+                        }, 1000);
                     }
                 }
                 if (option === paperBtn) {
@@ -116,10 +119,9 @@ const game = () => {
                     if (playerScore === 10 || compScore === 10) {   
                         celeberate();
                         setTimeout(() => {
-                            result
                             window.location.reload();
-                        }, 2000);
-                    } 
+                        }, 1000);
+                    }
                 }
                 if (option === scissorBtn) {
                     playerChose.innerText = "Scissor";
@@ -136,12 +138,11 @@ const game = () => {
                         playerScore++;
                         playerScoreVal.textContent = playerScore;
                     }
-                    if (playerScore === 10 || compScore === 10) {         
+                    if (playerScore === 10 || compScore === 10) {   
                         celeberate();
                         setTimeout(() => {
-                            result
                             window.location.reload();
-                        }, 2000);
+                        }, 1000);
                     }
                 }                
             })
